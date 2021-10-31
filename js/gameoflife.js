@@ -4,7 +4,18 @@ function seed(a, b, c) {
   return arr
 }
 
-function same([x, y], [j, k]) { }
+function same([x, y], [j, k]) {
+  let firstArr = [x, y]
+  let secondArr = [j, k]
+  const arr1 = firstArr.concat().sort();
+  const arr2 = secondArr.concat().sort();
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
+      return false;
+    }
+  }
+  return true;
+};
 
 // The game state to search for `cell` is passed as the `this` value of the function.
 function contains(cell) { }
